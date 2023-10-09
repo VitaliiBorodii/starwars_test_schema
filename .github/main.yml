@@ -5,9 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to check schema
     steps:
-      - uses: actions/checkout@v4
-      - id: foo
-        uses: actions/schema_check_test@v1.0.1
+      - uses: VitaliiBorodii/schema_check_test@v1.0.1
         with:
           token: '123'
       - run: echo random-number ${{ steps.foo.outputs }}
