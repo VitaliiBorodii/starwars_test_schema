@@ -67,6 +67,8 @@ type Human implements Character {
   appearsIn: [Episode]!
   # A list of starships this person has piloted, or an empty list if none
   starships: [Starship]
+
+  aliasName: String
 }
 # An autonomous mechanical character in the Star Wars universe
 type Droid implements Character {
