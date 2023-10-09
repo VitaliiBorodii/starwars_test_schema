@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  schema_check_job:
+    runs-on: ubuntu-latest
+    name: A job to check schema
+    steps:
+      - uses: actions/checkout@v4
+      - id: foo
+        uses: actions/schema_check_test@v1
+        with:
+          token: '123'
+      - run: echo random-number ${{ steps.foo.outputs }}
+        shell: bash

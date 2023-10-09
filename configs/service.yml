@@ -1,0 +1,15 @@
+kind: Service
+name: starwars
+
+spec:
+
+  path_user_profile: jwt.user.profile
+  path_user_role: jwt.user.roles
+
+  anonymous_profile: guest
+  anonymous_roles: [guest]
+
+  enable_extensions_output: true
+
+  schema_files:
+    - ../schema.graphql
