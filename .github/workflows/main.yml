@@ -1,3 +1,5 @@
+name: Schema check
+
 on: [push]
 
 jobs:
@@ -7,7 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: VitaliiBorodii/schema_check_test@v1.0.1
+      - uses: VitaliiBorodii/schema_check_test@v1.0.2
         with:
           token: '123'
       - run: echo result ${{ steps.foo.outputs }}
