@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: VitaliiBorodii/schema_check_test@v1.0.5
+      - uses: VitaliiBorodii/schema_check_test@v1.0.6
         with:
           token: '123'
