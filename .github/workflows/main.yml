@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: VitaliiBorodii/schema_check_test@v1.0.9
+      - uses: VitaliiBorodii/schema_check_test@v1.1.0
         with:
           token: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOm51bGwsInRva2VuVHlwZSI6InVzZXJfdG9rZW4iLCJ1c2VyX3Byb2ZpbGUiOiJ1c2VyIiwidXNlcl9yb2xlcyI6WyJhZG1pbiIsImNvbmZpZ3VyYXRvciIsInZpZXdlciIsImd1ZXN0Il0sInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6Imdlb3JnZUBsdWNhcy5jb20iLCJvcmdfaWQiOjEsInRva2VuIjoiY2RhNGI5OWEtMDFjYy00NGY5LWI4NGMtYzc4YzNlMWRmNjljIiwiZXhwIjoxNjk3NjE4NTc0LCJpYXQiOjE2OTcwMTM3NzR9.NjwjUZyEOnbXeSF0jQYtloQXgXW7FeGoBfsDqjbdLhCubwaoXlkqJXcluyhUG6D_K87-Zx6ba0UBESzQsww22Q'
           configs: ./configs/*.yml
