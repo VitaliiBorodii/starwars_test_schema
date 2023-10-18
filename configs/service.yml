@@ -1,6 +1,6 @@
 kind: Service
-name: starwars
-label: dev
+name: demo
+label: starwars
 
 spec:
   path_user_profile: jwt.user_profile
