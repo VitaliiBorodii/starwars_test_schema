@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - id: schema-check
-        uses: VitaliiBorodii/schema_check_test@v1.1.7
+        uses: VitaliiBorodii/schema_check_test@v1.1.8
         with:
           token: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOm51bGwsInRva2VuVHlwZSI6InVzZXJfdG9rZW4iLCJ1c2VyX3Byb2ZpbGUiOiJ1c2VyIiwidXNlcl9yb2xlcyI6WyJhZG1pbiIsImNvbmZpZ3VyYXRvciIsInZpZXdlciIsImd1ZXN0Il0sInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6Imdlb3JnZUBsdWNhcy5jb20iLCJvcmdfaWQiOjEsInRva2VuIjoiNzg0YTI0Y2ItZmU3Ny00MmY5LWEzNTYtMzA0OTM3M2QyMDM3IiwiZXhwIjoxNjk4MjQyMjY4LCJpYXQiOjE2OTc2Mzc0Njh9.qC7-0wCmy-xCu_h2R6WWwLnnjeZwbgxg43MQmFAXLVIrf3gi4Ay20TppQX9rvZtKnb-Tas8pKnEvEDn6NWmiIA'
           configs: ./configs/*.yml
