@@ -83,7 +83,7 @@ type Person {
 	eyeColor : String!
 	gender : String!
 	hairColor : String!
-	height : Int!
+	height : String!
 	mass : Float
 	skinColor : String	
 	pilotedStarship : [Starship!]!
