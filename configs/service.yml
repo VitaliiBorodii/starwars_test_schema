@@ -2,14 +2,21 @@ kind: Service
 name: starwars
 
 spec:
-
-  path_user_profile: jwt.user.profile
-  path_user_role: jwt.user.roles
+  path_user_profile: jwt.user_profile
+  path_user_role: jwt.user_roles
+  path_user_id: jwt.user_name
 
   anonymous_profile: guest
-  anonymous_roles: [guest]
+  anonymous_roles:
+    - viewer
+
+  polling_interval_schema: 300
+  polling_interval_profile: 2
 
   enable_extensions_output: true
-
   schema_files:
     - ../schema.graphql
+  reduct_extension_output:
+    - inigo.trace_id
+    - tracing
+
