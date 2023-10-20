@@ -1,6 +1,12 @@
 name: Schema check
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+      branches:
+      - 'main'
 
 jobs:
   schema_check_job:
