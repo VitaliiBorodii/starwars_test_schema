@@ -1,13 +1,14 @@
 name: Schema bypass
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      hash:
+        type: string
+        description: 'hash of the config'
+        required: true
 
 jobs:
-  inputs:
-    hash:
-      type: string
-      description: 'hash of the config'
-      required: true
   schema_check_job:
     runs-on: ubuntu-latest
     name: A job to check schema
@@ -19,7 +20,6 @@ jobs:
         with:
           token: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOm51bGwsInRva2VuVHlwZSI6InVzZXJfdG9rZW4iLCJ1c2VyX3Byb2ZpbGUiOiJ1c2VyIiwidXNlcl9yb2xlcyI6WyJhZG1pbiIsImNvbmZpZ3VyYXRvciIsInZpZXdlciIsImd1ZXN0Il0sInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6Imdlb3JnZUBsdWNhcy5jb20iLCJvcmdfaWQiOjEsInRva2VuIjoiMjJmNzUzYzItNjZhMS00NjA2LWIzODAtZjM5ZTE5ZjMyOWVkIiwiZXhwIjoxNjk4MjU5MTA1LCJpYXQiOjE2OTc2NTQzMDV9.Y3vvvO5wQUdI-T0sG65kNgy0YeCHwDdbI3JkMQ0oYdQRHszt-KIMKSEnGJewefB9cxP1st3eax3s47hNuQhkbQ'
           apiUrl: https://dev.inigo.io/api/query
-          hash: ${{github.event.inputs.hash}}
       - run: | 
           echo schema bypass result: ${{ steps.schema-check.outputs.result }}
         shell: bash
