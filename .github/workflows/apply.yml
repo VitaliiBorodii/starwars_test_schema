@@ -1,0 +1,23 @@
+name: Schema apply
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  schema_apply_job:
+    runs-on: ubuntu-latest
+    name: A job to apply schema
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - id: schema-apply
+        uses: VitaliiBorodii/schema_apply_test@v1.0.0
+        with:
+          token: ${{secrets.INIGO_TOKEN}}
+          apiUrl: https://de2e-213-110-151-104.ngrok-free.app/query
+          configs: ./configs/*.yml
+      - run: | 
+          echo schema apply result: ${{ steps.schema-apply.outputs.result }}
+        shell: bash
