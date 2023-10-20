@@ -91,6 +91,7 @@ type Person {
 	appearedIn : [Film!]!
 	type : Species
 	fromPlanet : Planet
+  heightNewField: Int
 
 	error : Boolean
 	panic : Boolean
