@@ -17,8 +17,8 @@ jobs:
       - id: schema-check
         uses: VitaliiBorodii/schema_bypass_test@v0.1.4
         with:
-          token: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOm51bGwsInRva2VuVHlwZSI6InVzZXJfdG9rZW4iLCJ1c2VyX3Byb2ZpbGUiOiJ1c2VyIiwidXNlcl9yb2xlcyI6WyJhZG1pbiIsImNvbmZpZ3VyYXRvciIsInZpZXdlciIsImd1ZXN0Il0sInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6Imdlb3JnZUBsdWNhcy5jb20iLCJvcmdfaWQiOjEsInRva2VuIjoiMjJmNzUzYzItNjZhMS00NjA2LWIzODAtZjM5ZTE5ZjMyOWVkIiwiZXhwIjoxNjk4MjU5MTA1LCJpYXQiOjE2OTc2NTQzMDV9.Y3vvvO5wQUdI-T0sG65kNgy0YeCHwDdbI3JkMQ0oYdQRHszt-KIMKSEnGJewefB9cxP1st3eax3s47hNuQhkbQ'
-          apiUrl: https://dev.inigo.io/api/query
+          token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOm51bGwsInRva2VuVHlwZSI6InVzZXJfdG9rZW4iLCJ1c2VyX3Byb2ZpbGUiOiJhZG1pbiIsInVzZXJfcm9sZXMiOlsiYWRtaW4iLCJjb25maWd1cmF0b3IiLCJ2aWV3ZXIiLCJndWVzdCJdLCJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJnZW9yZ2VAbHVjYXMuY29tIiwib3JnX2lkIjoxLCJ0b2tlbiI6ImY0Y2FjMTg1LWFhN2UtNGUxNy04NmM5LWJkOWI0Y2JlOWY1ZSIsImV4cCI6MTY5ODM5ODAyMSwiaWF0IjoxNjk3NzkzMjIxfQ.5o_dpS3HlZytJwcqLkTQop4WtHL1MibKh6dSDu9YZSQXSQr6bQUbkSntYfm_9r2g2McumdAJ0vOIJoPwN2jPgw
+          apiUrl: https://de2e-213-110-151-104.ngrok-free.app/query
           hash: ${{github.event.inputs.hash}}
       - run: | 
           echo schema bypass result: ${{ steps.schema-check.outputs.result }}
